@@ -1,4 +1,7 @@
 # using python 3.12 
 
 flask
+openai
+llama-index
+pypdf
 
