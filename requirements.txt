@@ -3,5 +3,5 @@
 flask
 openai
 llama-index
-pypdf
-
+ngrok
+pyopenssl

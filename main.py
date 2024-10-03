@@ -13,6 +13,7 @@ def about():
     return render_template("about.html")
 
 if __name__ == "__main__":
+    context = ('local.crt', 'local.key')
     app.run(debug=True)
 
 # %% 
