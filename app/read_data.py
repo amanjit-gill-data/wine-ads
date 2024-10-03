@@ -18,12 +18,15 @@ def data_to_engine():
     create and return chat engine
     """
 
-    DATA_DIR = "./data"
-    STORE_DIR = "./data/store"
+    APP_DIR = "app"
+
+    DATA_DIR = APP_DIR + "/data"
+    STORE_DIR = DATA_DIR + "/store"
+    KEY_PATH = APP_DIR + "/key"
 
     # %% obtain key 
 
-    with open("key") as file:
+    with open(KEY_PATH) as file:
         openai.api_key = file.readline().strip()
 
     # %% read data 
@@ -37,24 +40,4 @@ def data_to_engine():
         index = load_index_from_storage(context)
 
     return index.as_query_engine()
-
-# %% 
-
-def main():
-
-    prompt = "Write a Facebook ad for Penfolds Grange, " + \
-                "targeted at Indians " + \
-                "celebrating Diwali" 
-
-    engine = data_to_engine()
-    
-    print(engine.query(prompt))
-
-# %% 
-
-if __name__ == '__main__':
-    main()
-
-
-
 
