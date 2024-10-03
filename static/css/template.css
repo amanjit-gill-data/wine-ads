@@ -1,11 +1,32 @@
 body {
-  font-family: "Calibri", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  width: 500px;
 }
 
-.logo {
-  background-color: #0D122B;
+.header {
   padding: 10px;
+  background-color: #BE0216;
   color: white;
 }
 
+h1 {
+  font-size: 38px;
+}
 
+h2 {
+  font-size: 30px; 
+}
+
+textarea {
+  margin-top: 5px;
+  padding: 0;
+  font-size: 18px;
+  width: 100%;
+}
+
+input {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+}
